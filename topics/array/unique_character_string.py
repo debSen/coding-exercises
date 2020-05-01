@@ -11,15 +11,3 @@ def is_unique_char_string(str):
             return False
     return True
 
-#def main():
-#    parser = str_arg_parser.init_argparse()
-#    args = parser.parse_args()
-#    if len(args.s) > 1:
-#        parser.error("-s appears several times.")
-#    if is_unique_char_string(args.s[0]):
-#        print("The characters in the string are not unique")
-#    else:
-#        print("The characters in the string are not unique")
-#
-#if __name__ == '__main__':
-#    main()
