@@ -5,9 +5,9 @@ class Solution:
         """
         idx_nums1 = 0
         idx_nums2 = 0
-        
+        nums1_end_flag = 0
         for idx in range(len(nums1)):
-            if idx_nums2 < len(nums2) and (nums1[idx_nums1] > nums2[idx_nums2]):
+            if idx_nums2 < len(nums2) and (nums1[idx_nums1] > nums2[idx_nums2] or nums1_end_flag >= m):
                 for i in range(len(nums1)-2, idx_nums1-1, -1):
                     nums1[i + 1] = nums1[i]
                 nums1[idx_nums1] = nums2[idx_nums2]    
@@ -15,4 +15,5 @@ class Solution:
                 idx_nums1 += 1
             elif idx_nums2 < len(nums2) and nums1[idx_nums1] <= nums2[idx_nums2]:
                 idx_nums1 += 1
+                nums1_end_flag += 1
                 
