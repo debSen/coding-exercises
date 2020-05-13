@@ -1,5 +1,5 @@
 class Solution:
-    def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
+    def floodFill(self, image, sr, sc, newColor):
         startColor = image[sr][sc]
         # visited = [[0]*len(image[0])]*len(image)
         visited = [[0 for x in range(len(image[0]))] for y in range(len(image))]
@@ -18,5 +18,6 @@ class Solution:
             self.recursePaint(image, sr, sc-1, newColor, startColor, visited)
             self.recursePaint(image, sr, sc+1, newColor, startColor, visited)
 
-def stub():
-    pass
+def stub(image, sr, sc, newColor):
+    sol_obj = Solution()
+    return sol_obj.floodFill(image, sr, sc, newColor) 
