@@ -52,3 +52,8 @@ class Trie:
                 return False
             tcrawl = tcrawl.children[index]
         return True
+
+# Test Code
+def stub():
+    pass
+    
