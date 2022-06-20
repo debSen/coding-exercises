@@ -1,9 +1,11 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         for idx, item in enumerate(matrix):
-            if item[-1]>= target:
+            if item[-1]> target:
                 target_row = idx
                 break
+            elif item[-1] == target:
+                return True
         else:
             return False
         
