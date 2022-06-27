@@ -1,3 +1,5 @@
+from math import ceil
+
 class Solution:
 
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
@@ -11,7 +13,7 @@ class Solution:
             mid = int(low + (high - low)/2)
             hours = 0
             for item in piles:
-                hours += math.ceil(item/mid)
+                hours += ceil(item/mid)
             if hours <= h:
                 res = min(res, mid)
                 high = mid - 1
